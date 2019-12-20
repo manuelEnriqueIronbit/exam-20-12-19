@@ -1,0 +1,46 @@
+:host {
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+:host([hidden]), [hidden] {
+  display: none !important;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  font-family: inherit;
+}
+
+paper-card{
+  width: 50vh;
+  header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    background: #000;
+    height: 30px;
+    >div, iron-icon{
+      flex-grow: 1;
+      text-align: center;
+      color: #fff;
+    }
+  }
+  main{
+    height: 60vh;
+  }
+  footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    background: #000;
+    height: 30px;
+    >iron-icon{
+      flex-grow: 1;
+      text-align: center;
+      color: #fff;
+    }
+  }
+}
