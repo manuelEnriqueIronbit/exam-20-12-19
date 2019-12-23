@@ -30,6 +30,8 @@ export default css`
     background-color: #3b9440; }
   .battery.yellow div {
     background-color: #ccca50; }
+    .battery.yellow div.empty {
+      opacity: 0.6; }
   .battery.red div {
     background-color: #cf2b2b; }
     .battery.red div.empty {

@@ -40,6 +40,9 @@ $red: #cf2b2b;
   &.yellow{
     div{
       background-color: $yellow;
+      &.empty{
+        opacity: 0.6;
+      }
     }
   }
   &.red{

@@ -26,15 +26,29 @@ class PlayerComponent extends LitElement {
 
   render() {
     return html`
+    <div class="song">
       <p> Artist - ${this.artist}</p>
       <p> Now Playing - ${this.songName}</p>
-      <audio
-        controls
-        src="${this.video}">
-            Your browser does not support the
-            <code>audio</code> element.
-      </audio>  
+      <audio src="${this.video}">
+      </audio> 
+    </div>
     `;}
+  
+  play(){
+    let song = this.shadowRoot.querySelector("audio");
+    song.play();
+  }
+
+  pause(){
+    let song = this.shadowRoot.querySelector("audio");
+    song.pause();
+  }
+
+  getAudioSate(){
+    let song = this.shadowRoot.querySelector("audio");
+    return song.paused;
+  }
+
 }
 
 window.customElements.define("player-component", PlayerComponent);

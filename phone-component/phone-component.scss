@@ -26,9 +26,26 @@ paper-card{
       text-align: center;
       color: #fff;
     }
+    battery-component{
+      flex-grow: 0.1;
+    }
   }
   main{
     height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    .play, .pause{
+      background: none;
+      border: none;
+    }
+    .play{
+      color: royalBlue;
+    }
+    .pause{
+      color: crimson;
+    }
   }
   footer{
     display: flex;
@@ -43,4 +60,21 @@ paper-card{
       color: #fff;
     }
   }
+}
+.active{
+  color: #000;
+    background: #dbd44d;
+  &.off{
+    color: #dbd44d !important;
+    background: #000 !important;
+  }
+  border-radius: 100%;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  margin-top: 20px;
+  outline: none;
 }

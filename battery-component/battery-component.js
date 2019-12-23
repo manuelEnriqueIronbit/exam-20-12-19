@@ -14,23 +14,15 @@ class BatteryComponent extends LitElement {
 
   constructor() {
     super();
-    this.charge = 15;
+    this.charge = 0;
     this.charging = null;
     this.discharging = null;
   }
-
-  /*
-  <button @click="${this.plugIn}">Plug in</button>
-  <button @click="${this.plugOff}">Plug off</button>
-  <button @click="${this.discharge}">Discharge</button>
-  <button @click="${this.stopDischarging}">Stop Discharge</button>
-  */ 
 
   render() {
     return html`
     <div class="container">
       ${this.batteryIcon()}
-      
     </div>
   `;}
 
@@ -97,6 +89,11 @@ class BatteryComponent extends LitElement {
     clearInterval(this.discharging);
   }
   
+  playAndCharge(){
+    clearInterval(this.charging);
+    clearInterval(this.discharging);
+  }
+
 }
 
 window.customElements.define("battery-component", BatteryComponent);
